@@ -1,0 +1,19 @@
+# Robots.txt for DEVLY
+# This file tells search engines which pages to crawl
+
+User-agent: *
+Allow: /
+
+# Disallow admin or private sections (if any)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Sitemap location (update with your actual domain)
+Sitemap: https://yourdomain.com/sitemap.xml
+
+# Crawl delay (optional - helps prevent server overload)
+# Crawl-delay: 1
+
+# Block specific bots (if needed)
+# User-agent: BadBot
+# Disallow: /

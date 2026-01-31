@@ -1,0 +1,131 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+@import "./assets/fonts/fonts.css";
+
+
+
+body {
+  @apply bg-[#131313] text-base font-sans relative;
+
+}
+
+body{
+  overflow-x: hidden;
+}
+
+/* Arabic mode */
+body.font-ar {
+  @apply font-arabic;
+}
+
+/* Horizontal animated lines */
+/* Horizontal animated lines */
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(to right, theme('colors.border') 1px, transparent 1px);
+  background-size: 200px 2px;
+  animation: moveLines 10s linear infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes moveLines {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 200px 0;
+  }
+}
+
+/* Disable animation on mobile */
+@media (max-width: 768px) {
+  body::before {
+    animation: none;
+    background-size: 200px 2px; /* keep the grid static if you want */
+  }
+}
+
+
+/* Circular text rotation */
+@keyframes rotateText {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-text {
+  animation: rotateText 12s linear infinite;
+  transform-origin: center;
+}
+
+.clients-bg {
+  position: absolute;
+  inset: 0;
+  background: url('/assets/clients-svg-bg.svg') center/cover no-repeat;
+  transform: translateZ(0); /* GPU acceleration */
+  opacity: 0.15;
+  z-index: 1;
+  animation: bgFade 10s ease-in-out infinite;
+}
+
+@keyframes bgFade {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 0.15; }
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #fff;
+  border-bottom-color: #c9f31d;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+
+
+
+
+
+/* globals.css */
+@keyframes marquee-ltr {
+  0% { transform: translate3d(0%,0,0); }
+  100% { transform: translate3d(-25%,0,0); }
+}
+
+@keyframes marquee-rtl {
+  0% { transform: translate3d(0%,0,0); }
+  100% { transform: translate3d(25%,0,0); }
+}
+
+.animate-marquee-ltr {
+  animation: marquee-ltr 15s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-rtl {
+  animation: marquee-rtl 15s linear infinite;
+  will-change: transform;
+}
+
+
+
+
+
+
