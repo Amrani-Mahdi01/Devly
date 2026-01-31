@@ -8,8 +8,8 @@ Allow: /
 # Disallow: /admin/
 # Disallow: /private/
 
-# Sitemap location (update with your actual domain)
-Sitemap: https://yourdomain.com/sitemap.xml
+# Sitemap location
+Sitemap: https://devly-puce.vercel.app/sitemap.xml
 
 # Crawl delay (optional - helps prevent server overload)
 # Crawl-delay: 1
