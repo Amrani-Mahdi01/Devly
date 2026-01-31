@@ -31,12 +31,27 @@ export default {
           "0%, 100%": { opacity: "0" },
           "50%": { opacity: "1" },
         },
+        gradient: {
+          "0%, 100%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-20px)" },
+        },
+        shimmer: {
+          "0%": { backgroundPosition: "-1000px 0" },
+          "100%": { backgroundPosition: "1000px 0" },
+        },
       },
 
       animation: {
         marquee: "marquee 15s linear infinite",
         fadeInOut: "fadeInOut 6s ease-in-out infinite",
         fadeOpacity: "fadeOpacity 10s ease-in-out infinite",
+        gradient: "gradient 8s ease infinite",
+        float: "float 6s ease-in-out infinite",
+        shimmer: "shimmer 3s linear infinite",
       },
     },
   },

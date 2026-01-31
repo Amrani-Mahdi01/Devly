@@ -1,6 +1,6 @@
 import Chatbot from "../components/Chatbot";
 import Loader from "../components/Loader";
-import HeroSection from "../sections/HeroSection";
+import HeroSectionNew from "../sections/HeroSectionNew";
 import SEO from "../components/SEO";
 import { homepageSchema } from "../components/StructuredData";
 import { Suspense, lazy } from "react";
@@ -29,7 +29,7 @@ export default function Home() {
       />
 
       {/* HeroSection always loads immediately */}
-      <HeroSection />
+      <HeroSectionNew />
      
 
       {/* Below-the-fold sections lazy loaded */}
